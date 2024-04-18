@@ -1,10 +1,12 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { IoPersonCircleOutline, IoSearch } from "react-icons/io5";
 import { MdArrowBack } from "react-icons/md";
 import { ListSideBar } from "./ListSideBar";
 import { Titles } from "~/routes/dashboard";
 
-export const SideBar: FC<{titles: Titles[]}> = ({titles}) => {
+export const SideBar: FC<{ titles: Titles[] }> = ({ titles }) => {
+  const [value, setValue] = useState("");
+
   return (
     <aside className="w-[250px] flex flex-col h-screen p-4 bg-aside-bg">
       <div className="flex items-center gap-2 ml-2 mb-[41px]">
@@ -20,13 +22,14 @@ export const SideBar: FC<{titles: Titles[]}> = ({titles}) => {
       </button>
       <div className=" relative mb-[17px]">
         <input
+          onChange={(e) => setValue(e.target.value)}
           type="text"
           name="search"
           placeholder="Search"
           className=" w-[202px] h-7 ml-2 mb-[17px] pr-5 pl-2 text-sm text-white bg-[#1f1f28] rounded-[3px] border border-solid border-[#242c3b]"
         />
         <IoSearch className=" absolute top-[6px] right-5 text-[#b6bac099] cursor-pointer" />
-        <ListSideBar titles={titles} />
+        <ListSideBar titles={titles} value={value} />
       </div>
       <div className="ml-[6px] mt-auto flex justify-between">
         <div className="flex items-center gap-[7px]">
@@ -37,7 +40,7 @@ export const SideBar: FC<{titles: Titles[]}> = ({titles}) => {
           </div>
         </div>
         <button type="button">
-          <img src="/icons/setting.svg" alt="setting" />]ʼ
+          <img src="/icons/setting.svg" alt="setting" />
         </button>
       </div>
     </aside>

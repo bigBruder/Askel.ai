@@ -1,19 +1,17 @@
 import { FC } from "react";
 import { useIsOpen } from "~/hooks/useIsOpen";
-import { data } from "./ListSideBar";
+
 import { AnimatePresence, motion } from "framer-motion";
 import { nanoid } from "nanoid";
 import clsx from "clsx";
+import { Titles } from "~/routes/dashboard";
 
-type ItemProps = {
-  item: data;
-};
-export const ItemSideBar: FC<ItemProps> = ({ item }) => {
+export const ItemSideBar: FC<{ item: Titles }> = ({ item }) => {
   const { isOpen, toggleIsOpen } = useIsOpen();
 
   return (
     <li>
-      <div className=" w-[220px] pt-3 pr-[16px] pb-[14px] pl-[15px] flex justify-between  gap-2 rounded bg-[#1f1f28]">
+      <div className=" w-[220px] pt-3 pr-4 pb-[14px] pl-[15px] flex justify-between  gap-2 rounded bg-[#1f1f28]">
         <h3
           className={clsx`text-xs max-w-[170px] font-bold w-fit transition-colors duration-300
         ${isOpen ? "text-white" : "text-[#5d6983]"}`}
