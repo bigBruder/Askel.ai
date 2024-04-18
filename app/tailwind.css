@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/Lato-Regular.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/fonts/Lato-Medium.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(/fonts/Lato-Semibold.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/Lato-Bold.ttf) format("ttf");
+  }
+}
+
+body {
+  background: #1f1f28;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+input,
+textarea {
+  outline: none;
+  resize: none;
+}
+
+
