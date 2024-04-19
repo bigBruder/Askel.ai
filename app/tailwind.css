@@ -4,38 +4,38 @@
 
 @layer base {
   @font-face {
-    font-family: "Lato";
+    font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(/fonts/Lato-Regular.ttf) format("ttf");
+    src: url(/fonts/Lato-Regular.ttf) format('ttf');
   }
   @font-face {
-    font-family: "Lato";
+    font-family: 'Lato';
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: url(/fonts/Lato-Medium.ttf) format("ttf");
+    src: url(/fonts/Lato-Medium.ttf) format('ttf');
   }
   @font-face {
-    font-family: "Lato";
+    font-family: 'Lato';
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url(/fonts/Lato-Semibold.ttf) format("ttf");
+    src: url(/fonts/Lato-Semibold.ttf) format('ttf');
   }
   @font-face {
-    font-family: "Lato";
+    font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(/fonts/Lato-Bold.ttf) format("ttf");
+    src: url(/fonts/Lato-Bold.ttf) format('ttf');
   }
 }
 
 body {
   background: #1f1f28;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-style: normal;
   font-size: 14px;
   font-weight: 400;
@@ -47,4 +47,9 @@ textarea {
   resize: none;
 }
 
-
+.box_message {
+  @apply py-3 px-4 bg-[#0308127f] rounded-lg border border-[#222d43];
+}
+.animate_icons {
+  @apply transition-colors duration-300;
+}

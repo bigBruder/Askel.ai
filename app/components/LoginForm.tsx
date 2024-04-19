@@ -1,7 +1,10 @@
 import { Form } from "@remix-run/react";
-import { FC } from "react";
+import { FC, useState } from "react";
+import { FaCheck } from "react-icons/fa";
 
 export const LoginForm: FC = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
   return (
     <Form action="/login" method="post" className=" w-[400px] flex flex-col">
       <input
@@ -19,15 +22,21 @@ export const LoginForm: FC = () => {
         required
       />
       <div className="h-10 mb-6 flex items-center justify-between ">
-        <label className="flex flex-row-reverse gap-[10px] select-none cursor-pointer">
+        <button
+          type="button"
+          className="flex flex-row-reverse gap-[10px] select-none cursor-pointer"
+          onClick={() => setIsChecked((prevState) => !prevState)}
+        >
           <input
             type="checkbox"
             name="remember"
             className="hidden pointer-events-none"
           />
           Remember me
-          <span className="w-5 h-5 rounded bg-black not-to-show"></span>
-        </label>
+          <span className="w-5 h-5 flex items-center justify-center rounded bg-black not-to-show">
+            {isChecked && <FaCheck className="text-[#51bc51]" />}
+          </span>
+        </button>
 
         <span className="mr-[6px]">Forgot password</span>
       </div>
