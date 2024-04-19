@@ -11,29 +11,25 @@ export const ItemSideBar: FC<{ item: Titles }> = ({ item }) => {
 
   return (
     <li>
-      <div
-        className={clsx`flex px-4 py-3  rounded animate_icons cursor-pointer
-       ${isOpen ? 'bg-[#07b83f19]' : 'bg-transparent'}`}
+      <button
+        type="button"
+        onClick={toggleIsOpen}
+        className={clsx`flex w-full px-4 py-3 rounded animate_icons ${
+          isOpen ? 'bg-[#07b83f19]' : 'bg-transparent'
+        }`}
       >
-      
         <img src="/icons/frame.svg" alt="" className="mr-[22px] w-5 h-5" />
-        <h3
-          className={clsx` max-w-[160px] text-xs font-bold animate_icons
+        <span
+          className={clsx` max-w-[155px] text-start text-xs font-bold animate_icons
         ${isOpen ? 'text-white' : 'text-[#5d6983]'}`}
         >
           {item.title}
-        </h3>
-        <button
-          type="button"
-          onClick={toggleIsOpen}
-          className="w-5 ml-auto flex  text-[#5D6983] hover:text-activeColor animate_icons "
-        >
-          <MdKeyboardArrowDown
-            className={clsx` w-5 h-5 animate_icons
+        </span>
+        <MdKeyboardArrowDown
+          className={clsx`w-5 h-5  ml-auto text-[#5D6983] animate_icons
           ${isOpen && 'rotate-[-180deg] text-activeColor'}`}
-          />
-        </button>
-      </div>
+        />
+      </button>
       <AnimatePresence>
         {isOpen && (
           <motion.ul

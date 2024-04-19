@@ -40,7 +40,7 @@ export const Chat: FC = () => {
                   />
                   <span className=" text-xs/3">Sales.xls</span>
 
-                  <MdKeyboardArrowDown className="ml-[auto] w-5 h-5 text-white hover:text-[#007aff] animate_icons " />
+                  <MdKeyboardArrowDown className="ml-[auto] w-5 h-5 text-white hover:text-activeColor animate_icons " />
                 </div>
               </label>
             </Form>
@@ -77,7 +77,7 @@ export const Chat: FC = () => {
             <div className=" absolute right-3 bottom-3">
               <BiSolidDislike
                 onClick={toggleIsOpen}
-                className="w-3 h-3 text-[#5D6983] hover:text-[#007aff] animate_icons cursor-pointer"
+                className="w-3 h-3 text-[#5D6983] hover:text-activeColor animate_icons cursor-pointer"
               />
               <AnimatePresence>
                 {isOpen && (
