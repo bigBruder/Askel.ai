@@ -1,6 +1,6 @@
-import { Form } from "@remix-run/react";
-import { FC, useState } from "react";
-import { FaCheck } from "react-icons/fa";
+import { Form } from '@remix-run/react';
+import { FC, useState } from 'react';
+import { FaCheck } from 'react-icons/fa';
 
 export const LoginForm: FC = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -13,6 +13,7 @@ export const LoginForm: FC = () => {
         placeholder="Email"
         className="mb-2 py-3 px-4 bg-black rounded-lg border  border-[#617080]"
         required
+        autoComplete="off"
       />
       <input
         type="text"
@@ -20,17 +21,19 @@ export const LoginForm: FC = () => {
         placeholder="Password"
         className="mb-2 py-3 px-4 bg-black rounded-lg border  border-[#617080]"
         required
+        autoComplete="off"
       />
       <div className="h-10 mb-6 flex items-center justify-between ">
         <button
           type="button"
           className="flex flex-row-reverse gap-[10px] select-none cursor-pointer"
-          onClick={() => setIsChecked((prevState) => !prevState)}
+          onClick={() => setIsChecked(prevState => !prevState)}
         >
           <input
             type="checkbox"
             name="remember"
             className="hidden pointer-events-none"
+            autoComplete="off"
           />
           Remember me
           <span className="w-5 h-5 flex items-center justify-center rounded bg-black not-to-show">

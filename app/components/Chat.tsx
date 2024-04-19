@@ -94,6 +94,7 @@ export const Chat: FC = () => {
                         type="text"
                         className="min-w-[220px] pl-[10px] pr-6 py-[6px] text-[#B6BAC0] bg-[#040a13bf] rounded-[3px]"
                         placeholder="Add a comment"
+                        autoComplete="off"
                       />
                       <button
                         type="button"

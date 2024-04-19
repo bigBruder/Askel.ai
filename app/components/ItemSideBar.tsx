@@ -15,6 +15,35 @@ export const ItemSideBar: FC<{ item: Titles }> = ({ item }) => {
         className={clsx`flex px-4 py-3  rounded animate_icons cursor-pointer
        ${isOpen ? 'bg-[#07b83f19]' : 'bg-transparent'}`}
       >
+        <svg
+          width="21"
+          height="20"
+          viewBox="0 0 21 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.75098 15.6946L4.75098 4.30542"
+            stroke="#74D71E"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M4.75052 15.6944L16.1396 15.6944"
+            stroke="#74D71E"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M7.30859 11.0896C8.7937 9.73316 9.85894 8.95757 11.0602 7.88062L11.8057 10.8009L15.0542 8.06259"
+            stroke="#74D71E"
+            strokeWidth="1"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
         <img src="/icons/frame.svg" alt="" className="mr-[22px] w-5 h-5" />
         <h3
           className={clsx` max-w-[160px] text-xs font-bold animate_icons
@@ -25,11 +54,11 @@ export const ItemSideBar: FC<{ item: Titles }> = ({ item }) => {
         <button
           type="button"
           onClick={toggleIsOpen}
-          className="w-5 ml-auto flex  text-[#5D6983] hover:text-[#007aff] animate_icons "
+          className="w-5 ml-auto flex  text-[#5D6983] hover:text-activeColor animate_icons "
         >
           <MdKeyboardArrowDown
             className={clsx` w-5 h-5 animate_icons
-          ${isOpen && 'rotate-[-180deg] text-[#007aff]'}`}
+          ${isOpen && 'rotate-[-180deg] text-activeColor'}`}
           />
         </button>
       </div>

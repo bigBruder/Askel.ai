@@ -1,5 +1,5 @@
-import { Form } from "@remix-run/react";
-import { FC } from "react";
+import { Form } from '@remix-run/react';
+import { FC } from 'react';
 
 export const RegisterForm: FC = () => {
   return (
@@ -10,6 +10,7 @@ export const RegisterForm: FC = () => {
         placeholder="Email"
         className="mb-2 py-3 px-4 bg-black rounded-lg border  border-[#617080]"
         required
+        autoComplete="off"
       />
       <input
         type="text"
@@ -17,6 +18,7 @@ export const RegisterForm: FC = () => {
         placeholder="Your homepage"
         className="mb-6 py-3 px-4 bg-black rounded-lg border  border-[#617080]"
         required
+        autoComplete="off"
       />
       <button
         type="submit"
