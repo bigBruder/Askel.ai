@@ -40,7 +40,9 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: #fff;
+
 }
+
 input,
 textarea {
   outline: none;
@@ -50,6 +52,17 @@ textarea {
 .box_message {
   @apply py-3 px-4 bg-[#0308127f] rounded-lg border border-[#222d43];
 }
+
 .animate_icons {
   @apply transition-colors duration-300;
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hidden-scrollbar::-webkit-scrollbar-track {
+  display: none;
+}
+.hidden-scrollbar::-webkit-scrollbar-thumb {
+  display: none;
 }

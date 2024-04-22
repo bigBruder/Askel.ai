@@ -1,7 +1,7 @@
 import { Form } from '@remix-run/react';
 import { FC } from 'react';
 import { LuPlus } from 'react-icons/lu';
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
+import {Slider} from './Swiper';
 
 export const Field: FC = () => {
   return (
@@ -19,43 +19,7 @@ export const Field: FC = () => {
         </button>
       </Form>
 
-      <div className=" max-w-[650px] flex gap-2 items-center">
-        <button
-          type="button"
-          className="w-6 h-6 text-white hover:text-activeColor animate_icons"
-        >
-          <MdKeyboardArrowLeft className="w-6 h-6" />
-        </button>
-        <ul className="flex gap-[6px]">
-          <li className="max-w-[78px] px-[10px] bg-[#12121ae5] border border-[#242c3b] rounded-lg">
-            <span className="text-xs/6 text-white">Suggestion</span>
-          </li>
-          <li className="max-w-[78px] px-[10px] bg-[#12121ae5] border border-[#242c3b] rounded-lg">
-            <span className="text-xs/6 text-white">Suggestion</span>
-          </li>
-          <li className="max-w-[78px] px-[10px] bg-[#12121ae5] border border-[#242c3b] rounded-lg">
-            <span className="text-xs/6 text-white">Suggestion</span>
-          </li>
-          <li className="max-w-[78px] px-[10px] bg-[#12121ae5] border border-[#242c3b] rounded-lg">
-            <span className="text-xs/6 text-white">Suggestion</span>
-          </li>
-          <li className="max-w-[78px] px-[10px] bg-[#12121ae5] border border-[#242c3b] rounded-lg">
-            <span className="text-xs/6 text-white">Suggestion</span>
-          </li>
-          <li className="max-w-[78px] px-[10px] bg-[#12121ae5] border border-[#242c3b] rounded-lg">
-            <span className="text-xs/6 text-white">Suggestion</span>
-          </li>
-          <li className="max-w-[78px] px-[10px] bg-[#12121ae5] border border-[#242c3b] rounded-lg">
-            <span className="text-xs/6 text-white">Suggestion</span>
-          </li>
-        </ul>
-        <button
-          type="button"
-          className="w-6 h-6 text-white hover:text-activeColor animate_icons"
-        >
-          <MdKeyboardArrowRight className="w-6 h-6" />
-        </button>
-      </div>
+      <Slider />
     </div>
   );
 };

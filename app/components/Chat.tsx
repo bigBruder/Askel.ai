@@ -12,7 +12,7 @@ export const Chat: FC = () => {
 
   return (
     <main className=" pt-9 pb-4 grow bg-dashboard bg-no-repeat bg-right bg-contain ">
-      <div className="flex flex-col mx-auto max-w-[664px] h-full">
+      <div className="flex flex-col mx-auto max-w-[664px] h-full overflow-y-auto">
         <ul className="flex flex-col gap-1">
           <li className="w-[275px] box_message">
             <p className=" text-xs opacity-[0.87]">
