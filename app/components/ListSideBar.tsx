@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { ItemSideBar } from './ItemSideBar';
-import { Titles } from '~/routes/dashboard';
+import { Titles } from '~/routes/dashboard.chat';
 
 interface ListSideBarProps {
   titles: Titles[];

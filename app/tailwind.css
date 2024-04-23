@@ -40,7 +40,6 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: #fff;
-
 }
 
 input,
@@ -65,4 +64,8 @@ textarea {
 }
 .hidden-scrollbar::-webkit-scrollbar-thumb {
   display: none;
+}
+
+.activeLink {
+  @apply bg-[#1f1f28] text-white stroke-[#007AFF] fill-[#007AFF];
 }

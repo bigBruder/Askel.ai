@@ -1,7 +1,7 @@
 import { Form } from '@remix-run/react';
 import { FC } from 'react';
 import { LuPlus } from 'react-icons/lu';
-import {Slider} from './Swiper';
+import {Suggestion} from './Suggestion';
 
 export const Field: FC = () => {
   return (
@@ -19,7 +19,7 @@ export const Field: FC = () => {
         </button>
       </Form>
 
-      <Slider />
+      <Suggestion />
     </div>
   );
 };

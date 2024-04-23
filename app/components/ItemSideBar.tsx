@@ -3,8 +3,7 @@ import { useIsOpen } from '~/hooks/useIsOpen';
 import { AnimatePresence, motion } from 'framer-motion';
 import { nanoid } from 'nanoid';
 import clsx from 'clsx';
-import { Titles } from '~/routes/dashboard';
-import { MdKeyboardArrowDown } from 'react-icons/md';
+import { Titles } from '~/routes/dashboard.chat';
 
 export const ItemSideBar: FC<{ item: Titles }> = ({ item }) => {
   const { isOpen, toggleIsOpen } = useIsOpen();
@@ -18,17 +17,21 @@ export const ItemSideBar: FC<{ item: Titles }> = ({ item }) => {
           isOpen ? 'bg-[#07b83f19]' : 'bg-transparent'
         }`}
       >
-        <img src="/icons/frame.svg" alt="" className="mr-[22px] w-5 h-5" />
+        <svg className="mr-[22px] w-5 h-5 stroke-[#74D71E]">
+          <use xlinkHref="/icons/sprite.svg#graph" />
+        </svg>
         <span
           className={clsx` max-w-[155px] text-start text-xs font-bold animate_icons
         ${isOpen ? 'text-white' : 'text-[#5d6983]'}`}
         >
           {item.title}
         </span>
-        <MdKeyboardArrowDown
-          className={clsx`w-5 h-5  ml-auto text-[#5D6983] animate_icons
-          ${isOpen && 'rotate-[-180deg] text-activeColor'}`}
-        />
+        <svg
+          className={clsx`w-5 h-5  ml-auto fill-[#5D6983] animate_icons
+          ${isOpen && 'rotate-[-180deg] fill-[#007aff]'}`}
+        >
+          <use xlinkHref="/icons/sprite.svg#arrow-down" />
+        </svg>
       </button>
       <AnimatePresence>
         {isOpen && (

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export const useIsOpen = (): {
   isOpen: boolean;
@@ -6,7 +6,7 @@ export const useIsOpen = (): {
 } => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleIsOpen = () => {
-    setIsOpen((prevState) => !prevState);
+    setIsOpen(prevState => !prevState);
   };
 
   return { isOpen, toggleIsOpen };

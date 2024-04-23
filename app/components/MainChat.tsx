@@ -3,16 +3,15 @@ import { Field } from './Field';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Form } from '@remix-run/react';
 import { MdKeyboardArrowDown } from 'react-icons/md';
-import { BiSolidDislike } from 'react-icons/bi';
 import { useIsOpen } from '~/hooks/useIsOpen';
 
-export const Chat: FC = () => {
+export const MainChat: FC = () => {
   const [isLoading] = useState<boolean>(true);
   const { isOpen, toggleIsOpen } = useIsOpen();
 
   return (
     <main className=" pt-9 pb-4 grow bg-dashboard bg-no-repeat bg-right bg-contain ">
-      <div className="flex flex-col mx-auto max-w-[664px] h-full overflow-y-auto">
+      <div className="flex flex-col mx-auto max-w-[664px] h-full">
         <ul className="flex flex-col gap-1">
           <li className="w-[275px] box_message">
             <p className=" text-xs opacity-[0.87]">
@@ -74,11 +73,17 @@ export const Chat: FC = () => {
               </span>{' '}
               contact information for each customer?
             </p>
-            <div className=" absolute right-3 bottom-3">
-              <BiSolidDislike
+            <div className=" absolute right-2 bottom-1">
+              <button
+                type="button"
                 onClick={toggleIsOpen}
-                className="w-3 h-3 text-[#5D6983] hover:text-activeColor animate_icons cursor-pointer"
-              />
+                className=" w-4 h-4 cursor-pointer text-[#5D6983] hover:text-activeColor  animate_icons "
+              >
+                <svg className="w-3 h-3">
+                  <use xlinkHref="/icons/sprite.svg#dislike" />
+                </svg>
+              </button>
+
               <AnimatePresence>
                 {isOpen && (
                   <motion.div
@@ -100,11 +105,9 @@ export const Chat: FC = () => {
                         type="button"
                         className=" w-[18px] h-[18px] absolute  top-2 right-1"
                       >
-                        <img
-                          src="/icons/arrow-circle-down.svg"
-                          alt=""
-                          className=" w-[18px] h-[18px] text-[#B6BAC0] animate_icons"
-                        />
+                        <svg className=" w-[18px] h-[18px] fill-[#6a7794]animate_icons">
+                          <use xlinkHref="/icons/sprite.svg#arrow-circle" />
+                        </svg>
                       </button>
                     </Form>
                   </motion.div>
@@ -148,17 +151,17 @@ export const Chat: FC = () => {
           {isLoading && (
             <li className="box_message max-w-[134px]">
               <div className="flex items-center gap-[10px]">
-                <motion.img
-                  src="/icons/loading.svg"
-                  alt="loading"
-                  className="w-[18px] h-[18px]"
+                <motion.svg
+                  className="w-5 h-5"
                   animate={{ rotate: 360 }}
                   transition={{
                     repeat: Infinity,
                     duration: 1,
                     ease: 'linear',
                   }}
-                />
+                >
+                  <use xlinkHref="/icons/sprite.svg#loading" />
+                </motion.svg>
                 <p className="text-xs opacity-[0.87]">Implementing</p>
               </div>
             </li>

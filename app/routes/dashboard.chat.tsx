@@ -1,7 +1,12 @@
 import { ActionFunctionArgs, json } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
-import { Chat } from '~/components/Chat';
+import { BackBtn } from '~/components/BackBtn';
+
+import { ListSideBar } from '~/components/ListSideBar';
+import { MainChat } from '~/components/MainChat';
 import { SideBar } from '~/components/SideBar';
+import { User } from '~/components/User';
+
 export type Titles = {
   id: string;
   title: string;
@@ -24,15 +29,19 @@ export async function action({ request }: ActionFunctionArgs) {
   return json({ ok: true });
 }
 
-const Dashboard = () => {
+const Page = () => {
   const { titles } = useLoaderData<typeof loader>();
 
   return (
     <div className="flex ">
-      <SideBar titles={titles} />
-      <Chat />
+      <SideBar>
+        <BackBtn path="/dashboard/overview" />
+        <ListSideBar titles={titles} />
+        <User />
+      </SideBar>
+      <MainChat />
     </div>
   );
 };
 
-export default Dashboard;
+export default Page;
