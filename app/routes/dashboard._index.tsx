@@ -4,7 +4,7 @@ import { OverviewMain } from '~/components/OverviewMain';
 import { SideBar } from '~/components/SideBar';
 import { User } from '~/components/User';
 
-const Page: FC = () => {
+const DashboardPage: FC = () => {
   return (
     <div className="flex">
       <SideBar>
@@ -16,4 +16,4 @@ const Page: FC = () => {
   );
 };
 
-export default Page;
+export default DashboardPage;

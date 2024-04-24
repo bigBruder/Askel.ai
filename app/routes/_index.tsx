@@ -1,13 +1,11 @@
-import { Link } from "@remix-run/react";
+import { Link } from '@remix-run/react';
 
 export default function Index() {
   return (
     <section className=" h-screen flex items-center justify-center bg-auth bg-no-repeat bg-right-bottom">
       <div className="max-w-[750px] py-[97px] px-[51px] flex flex-col gap-7 items-center">
         <img className="w-[100px] h-[52px]" src="/icons/auth-logo.svg" alt="logo" />
-        <p className=" text-[#57a6f8] text-center text-4xl/9 font-bold">
-          Welcome
-        </p>
+        <p className=" text-[#57a6f8] text-center text-4xl/9 font-bold">Welcome</p>
         <p>Click on the button below to log in to your account.</p>
         <Link
           to="login"
@@ -30,9 +28,9 @@ export default function Index() {
           </div>
         </div>
         <p className="text-center">
-          This invite was sent from Askel.io. If you were not expecting this
-          invitation, you can ignore this email. If you are concerned about your
-          account`s safety, please let us know at{" "}
+          This invite was sent from Askel.io. If you were not expecting this invitation,
+          you can ignore this email. If you are concerned about your account`s safety,
+          please let us know at{' '}
           <a
             className=" hover:text-[#51bc51] underline underline-offset-2 transition-colors"
             href="mailto:info@askel.io"

@@ -29,9 +29,8 @@ export async function action({ request }: ActionFunctionArgs) {
   return json({ ok: true });
 }
 
-const Page = () => {
+const ChatPage = () => {
   const { titles } = useLoaderData<typeof loader>();
-
   return (
     <div className="flex ">
       <SideBar>
@@ -44,4 +43,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default ChatPage;

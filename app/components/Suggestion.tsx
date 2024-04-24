@@ -11,6 +11,9 @@ const testArr: test[] = [
   { id: 4, value: 'Alias rem aperiam repudiandae?' },
   { id: 5, value: 'Non voluptate sit' },
   { id: 6, value: 'Assumenda sint laboriosam quidem' },
+  { id: 4, value: 'Alias rem aperiam repudiandae?' },
+  { id: 5, value: 'Non voluptate sit' },
+  { id: 6, value: 'Assumenda sint laboriosam quidem' },
 ];
 export const Suggestion: FC = () => {
   const containerRef = useRef(null);

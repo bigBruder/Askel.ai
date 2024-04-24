@@ -3,7 +3,7 @@ import { Navigation } from '~/components/Navigation';
 import { SideBar } from '~/components/SideBar';
 import { User } from '~/components/User';
 
-const Page: FC = () => {
+const UsersPage: FC = () => {
   return (
     <div className="flex">
       <SideBar>
@@ -14,4 +14,4 @@ const Page: FC = () => {
   );
 };
 
-export default Page;
+export default UsersPage;
