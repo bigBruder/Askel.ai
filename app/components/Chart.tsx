@@ -1,21 +1,13 @@
 import clsx from 'clsx';
 import { FC } from 'react';
-type ChartProps = {
-  mockProcessed: Array<{
-    day: string;
-    value: number;
-  }>;
-  mockRate: Array<{
-    day: string;
-    value: number;
-  }>;
-};
+import { ChartProps } from '~/types/props';
+
 export const Chart: FC<ChartProps> = ({ mockProcessed, mockRate }) => {
   const isMore100 =
     mockProcessed.some(el => el.value > 100) || mockRate.some(el => el.value > 100);
   return (
     <div className="flex gap-4">
-      <div className=" w-[408px] p-5 bg-[#12121ae5] rounded-lg flex flex-col justify-end">
+      <div className=" w-[408px] p-5 bg-[#12121ae5] rounded-lg flex flex-col justify-end overflow-hidden">
         <p className="mb-3 text-[#ffffff99] text-xs/5 font-medium">
           Volume of events processed
         </p>
@@ -63,12 +55,7 @@ export const Chart: FC<ChartProps> = ({ mockProcessed, mockRate }) => {
           Error and success rate
         </p>
         <div className="mt-auto flex flex-col items-end gap-[33px] justify-between ">
-          {isMore100 && (
-            <div className=" flex gap-[10px] items-center">
-              <p className="text-[#ffffff99] text-xs">150</p>
-              <div className="h-[1px] w-[322px] bg-[#ffffff0f]"></div>
-            </div>
-          )}
+          
           <div className=" flex gap-[10px] items-center">
             <p className="text-[#ffffff99] text-xs">100</p>
             <div className="h-[1px] w-[322px] bg-[#ffffff0f]"></div>

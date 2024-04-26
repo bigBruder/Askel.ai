@@ -1,8 +1,7 @@
 import { Link } from '@remix-run/react';
 import { FC } from 'react';
-type BackBtnProps = {
-  path: string;
-};
+import { BackBtnProps } from '~/types/props';
+
 export const BackBtn: FC<BackBtnProps> = ({ path }) => {
   return (
     <div>

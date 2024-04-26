@@ -53,7 +53,7 @@ textarea {
 }
 
 .animate_icons {
-  @apply transition-colors duration-300;
+  @apply transition-transform duration-300;
 }
 
 .hidden-scrollbar::-webkit-scrollbar {

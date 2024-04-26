@@ -1,36 +1,13 @@
 import { FC } from 'react';
 import { Chart } from './Chart';
+import { Statistics } from './Statistics';
+import { OverviewMainProps } from '~/types/props';
 
-const mockProcessed = [
-  { day: 'Sun', value: 0 },
-  { day: 'Mon', value: 50 },
-  { day: 'Wed', value: 75 },
-  { day: 'Thu', value: 100 },
-  { day: 'Fri', value: 100 },
-  { day: 'Sat', value: 150 },
-];
-const mockRate = [
-  { day: 'Sun', value: 25 },
-  { day: 'Mon', value: 50 },
-  { day: 'Wed', value: 75 },
-  { day: 'Thu', value: 100 },
-  { day: 'Fri', value: 100 },
-  { day: 'Sat', value: 50 },
-];
-enum StatusOverview {
-  running = 'running',
-  audit_mode = 'audit mode',
-  need_attention = 'need attention',
-}
-const mockOverviews = [
-  {
-    title: 'Invoice reminers',
-    status: 'running',
-    time: '13.04.24  11:30',
-    success_rate: '',
-  },
-];
-export const OverviewMain: FC = () => {
+export const OverviewMain: FC<OverviewMainProps> = ({
+  mockOverviews,
+  mockProcessed,
+  mockRate,
+}) => {
   return (
     <main className="p-6 grow flex flex-col bg-auth bg-no-repeat bg-top">
       <div className="mx-auto flex flex-col gap-4">
@@ -61,9 +38,7 @@ export const OverviewMain: FC = () => {
           </div>
         </div>
         <Chart mockProcessed={mockProcessed} mockRate={mockRate} />
-        <div className=" py-7 px-9 bg-[#12121ae5] rounded-lg">
-          <p className="mb-8 font-bold text-lg/5">Overview</p>
-        </div>
+        <Statistics mockOverviews={mockOverviews} />
       </div>
     </main>
   );

@@ -1,21 +1,8 @@
 import { FC, useRef } from 'react';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
-type test = {
-  id: number;
-  value: string;
-};
-const testArr: test[] = [
-  { id: 1, value: 'Suggestion' },
-  { id: 2, value: 'Example text' },
-  { id: 3, value: 'Lorem ipsum dolor sit amet.' },
-  { id: 4, value: 'Alias rem aperiam repudiandae?' },
-  { id: 5, value: 'Non voluptate sit' },
-  { id: 6, value: 'Assumenda sint laboriosam quidem' },
-  { id: 4, value: 'Alias rem aperiam repudiandae?' },
-  { id: 5, value: 'Non voluptate sit' },
-  { id: 6, value: 'Assumenda sint laboriosam quidem' },
-];
-export const Suggestion: FC = () => {
+import { suggestion } from '~/mockData';
+
+export const Suggestions: FC = () => {
   const containerRef = useRef(null);
   const scrollLeft = () => {
     if (containerRef.current) {
@@ -47,7 +34,7 @@ export const Suggestion: FC = () => {
         ref={containerRef}
         className="w-[600px] flex gap-[6px] justify-around hidden-scrollbar overflow-x-auto"
       >
-        {testArr.map(el => (
+        {suggestion.map(el => (
           <li
             key={el.id}
             className="max-w-fit px-[10px] bg-[#12121ae5] border border-[#242c3b] rounded-lg"
