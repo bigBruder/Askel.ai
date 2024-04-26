@@ -41,6 +41,7 @@ export const mockOverviews: Overviews[] = [
     status: 'running',
     time: '13.04.24 10:30',
     success_rate: 22,
+    rate: 55,
   },
   {
     id: 2,
@@ -48,6 +49,7 @@ export const mockOverviews: Overviews[] = [
     status: 'audit mode',
     time: '13.04.24 11:30',
     success_rate: 33,
+    rate: 33,
   },
   {
     id: 3,
@@ -55,6 +57,8 @@ export const mockOverviews: Overviews[] = [
     status: 'needs attention',
     time: '13.04.24 12:30',
     success_rate: 44,
+    rate: 44,
+
   },
   {
     id: 4,
@@ -62,6 +66,8 @@ export const mockOverviews: Overviews[] = [
     status: 'running',
     time: '13.04.24 12:30',
     success_rate: 77,
+    rate: 11,
+
   },
   {
     id: 5,
@@ -69,6 +75,8 @@ export const mockOverviews: Overviews[] = [
     status: 'audit mode',
     time: '13.04.24 12:30',
     success_rate: 90,
+    rate: 55,
+
   },
   {
     id: 6,
@@ -76,6 +84,8 @@ export const mockOverviews: Overviews[] = [
     status: 'needs attention',
     time: '13.04.24 12:30',
     success_rate: 10,
+    rate: 66,
+
   },
 ];
 export const mockOverviewsId: Overviews[] = [
@@ -85,6 +95,7 @@ export const mockOverviewsId: Overviews[] = [
     status: 'audit mode',
     time: '13.04.24 11:30',
     success_rate: 33,
+    rate: 77,
   },
   {
     id: 1,
@@ -92,6 +103,8 @@ export const mockOverviewsId: Overviews[] = [
     status: 'running',
     time: '13.04.24 10:30',
     success_rate: 22,
+    rate: 77,
+
   },
   {
     id: 4,
@@ -99,6 +112,8 @@ export const mockOverviewsId: Overviews[] = [
     status: 'running',
     time: '13.04.24 12:30',
     success_rate: 77,
+    rate: 33,
+
   },
 
   {
@@ -107,6 +122,8 @@ export const mockOverviewsId: Overviews[] = [
     status: 'needs attention',
     time: '13.04.24 12:30',
     success_rate: 44,
+    rate: 88,
+
   },
 
   {
@@ -115,6 +132,8 @@ export const mockOverviewsId: Overviews[] = [
     status: 'audit mode',
     time: '13.04.24 12:30',
     success_rate: 90,
+    rate: 55,
+
   },
   {
     id: 6,
@@ -122,6 +141,8 @@ export const mockOverviewsId: Overviews[] = [
     status: 'needs attention',
     time: '13.04.24 12:30',
     success_rate: 10,
+    rate: 66,
+
   },
 ];
 export const suggestion: SuggestionArr[] = [

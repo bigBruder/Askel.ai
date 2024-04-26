@@ -54,9 +54,9 @@ export const Statistics: FC<StatisticsProps> = ({ mockOverviews }) => {
               <div className="flex items-center justify-between">
                 <p className="text-[#07b83f]">{el.success_rate}%</p>
                 <div className="w-[97px] h-1 bg-[#39394b] rounded-xl relative">
-                  <Rate rate={el.success_rate} status={el.status} />
+                  <Rate rate={el.rate} status={el.status} />
                 </div>
-                <p>74%</p>
+                <p>{el.rate}%</p>
               </div>
             </div>
           </li>

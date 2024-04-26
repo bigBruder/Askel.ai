@@ -10,6 +10,7 @@ const UsersPage: FC = () => {
         <Navigation />
         <User />
       </SideBar>
+      <div className="flex grow items-center justify-center bg-auth bg-no-repeat bg-top">UsersPage</div>
     </div>
   );
 };

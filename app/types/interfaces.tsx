@@ -12,6 +12,7 @@ export interface Overviews {
   status: string;
   time: string;
   success_rate: number;
+  rate: number
 }
 export interface Titles {
   id: string;
