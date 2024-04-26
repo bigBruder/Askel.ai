@@ -48,6 +48,24 @@ textarea {
   resize: none;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  background: #00561b3f;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  width: 8px;
+  background: #00561b3f;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #0f7e32;
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
 .box_message {
   @apply py-3 px-4 bg-[#0308127f] rounded-lg border border-[#222d43];
 }

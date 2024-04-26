@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Navigation } from '~/components/Navigation';
-import { OverviewMain } from '~/components/OverviewMain';
+import { MainOverview } from '~/components/MainOverview';
 import { SideBar } from '~/components/SideBar';
 import { User } from '~/components/User';
 import { mockOverviews, mockProcessed, mockRate } from '~/mockData';
@@ -12,7 +12,7 @@ const DashboardPage: FC = () => {
         <Navigation />
         <User />
       </SideBar>
-      <OverviewMain
+      <MainOverview
         mockOverviews={mockOverviews}
         mockProcessed={mockProcessed}
         mockRate={mockRate}

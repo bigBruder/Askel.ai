@@ -15,7 +15,7 @@ export async function action({ request }: ActionFunctionArgs) {
 }
 const Login = () => {
   return (
-    <main className=" h-screen flex items-center justify-center  bg-auth bg-no-repeat bg-right-bottom">
+    <main className=" h-screen flex items-center justify-center  bg-logo bg-no-repeat bg-right-bottom">
       <div className="w-[834px] h-[561px] px-[171px] pt-20 flex flex-col items-center gap-6 rounded-lg bg-[#12121ae5] ">
         <img src="/icons/auth-logo.svg" alt="logo" className="" />
         <h3 className=" font-bold text-4xl/9 text-[#57a6f8] text-center capitalize">

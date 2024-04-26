@@ -1,7 +1,7 @@
 
 import { BackBtn } from '~/components/BackBtn';
 import { ListOverview } from '~/components/ListOverview';
-import { OverviewMain } from '~/components/OverviewMain';
+import { MainOverview } from '~/components/MainOverview';
 import { SideBar } from '~/components/SideBar';
 import { User } from '~/components/User';
 import { mockOverviewsId, mockProcessedId, mockRateId, titles } from '~/mockData';
@@ -22,7 +22,7 @@ export default function DashboardOverview() {
         </div>
         <User />
       </SideBar>
-      <OverviewMain
+      <MainOverview
         mockOverviews={mockOverviewsId}
         mockProcessed={mockProcessedId}
         mockRate={mockRateId}

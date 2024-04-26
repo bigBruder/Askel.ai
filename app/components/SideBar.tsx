@@ -9,7 +9,7 @@ export const SideBar: FC<{ children: ReactNode }> = ({ children }) => {
     <aside
       className={clsx`${
         pathName === '/dashboard/chat' ? 'w-[320px]' : 'w-[250px]'
-      } h-screen p-3  flex flex-col bg-aside`}
+      } h-screen p-3  flex flex-col bg-gradient-to-b from-[#12121A] to-[#ffffff3d])`}
     >
       <Link to="/dashboard" className=" my-5 flex gap-2 items-center ">
         <img src="/icons/sidebar-logo.svg" alt="logo" />

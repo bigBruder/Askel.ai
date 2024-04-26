@@ -2,7 +2,7 @@ import { Link } from '@remix-run/react';
 
 export default function Index() {
   return (
-    <section className=" h-screen flex items-center justify-center bg-auth bg-no-repeat bg-right-bottom">
+    <section className=" h-screen flex items-center justify-center bg-logo bg-no-repeat bg-right-bottom ">
       <div className="max-w-[750px] py-[97px] px-[51px] flex flex-col gap-7 items-center">
         <img className="w-[100px] h-[52px]" src="/icons/auth-logo.svg" alt="logo" />
         <p className=" text-[#57a6f8] text-center text-4xl/9 font-bold">Welcome</p>

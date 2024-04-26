@@ -10,7 +10,9 @@ const AutomationsPage: FC = () => {
         <Navigation />
         <User />
       </SideBar>
-      <div className="flex grow items-center justify-center bg-auth bg-no-repeat bg-top">AutomationsPage</div>
+      <main className="p-6 grow flex flex-col bg-logo bg-no-repeat bg-top bg-cover">
+        AutomationsPage
+      </main>
     </div>
   );
 };

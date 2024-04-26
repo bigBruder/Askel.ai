@@ -3,7 +3,7 @@ import { Overviews, Processed, Rate, Titles } from './interfaces';
 export type StatisticsProps = {
   mockOverviews: Overviews[];
 };
-export type OverviewMainProps = {
+export type MainOverviewProps = {
   mockOverviews: Overviews[];
   mockProcessed: Processed[];
   mockRate: Rate[];

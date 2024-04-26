@@ -6,9 +6,9 @@ import { StatisticsProps } from '~/types/props';
 
 export const Statistics: FC<StatisticsProps> = ({ mockOverviews }) => {
   return (
-    <div className=" py-7 px-9 bg-[#12121ae5] rounded-lg">
-      <p className="mb-8 font-bold text-lg/5">Overview</p>
-      <ul className="flex flex-col gap-3">
+    <div className=" max-h-[400px] overflow-y-auto py-6 px-9 bg-[#12121ae5] rounded-lg">
+      <p className="mb-6 font-bold text-lg/5">Overview</p>
+      <ul className="flex flex-col gap-2">
         <li className="flex">
           <div className="flex-[1]">
             <div className="flex gap-1">

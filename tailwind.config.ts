@@ -5,10 +5,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        aside:
-          'linear-gradient(180deg,rgba(18, 18, 26, 0.9) 0%,rgba(18, 18, 26, 0.225) 100%)',
-        dashboard: "url('/icons/bg-logo/dashboard.svg')",
-        auth: "url('/icons/bg-logo/auth.svg')",
+        logo: "url('/icons/bg-logo.svg')",
       },
       textColor: {
         activeColor: '#007aff',
