@@ -1,17 +1,32 @@
-import { FC } from 'react';
-import { Form } from '@remix-run/react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { useIsOpen } from '~/hooks/useIsOpen';
-
-import { DownloadFile } from './DownloadFile';
+// import { Form } from '@remix-run/react';
+// import { AnimatePresence, motion } from 'framer-motion';
+// import { useIsOpen } from '~/hooks/useIsOpen';
+// import { DownloadFile } from './DownloadFile';
+import { FC, useState } from 'react';
 import { Field } from './Field';
 import { MainChatProps } from '~/types/props';
+import { Messages } from '~/types/interfaces';
 
-export const MainChat: FC<MainChatProps> = ({ messages }) => {
-  const { isOpen, toggleIsOpen } = useIsOpen();
+export const MainChat: FC<MainChatProps> = () => {
+  // const { isOpen, toggleIsOpen } = useIsOpen();
+  const [messages, setMessages] = useState<Messages[]>([]);
+
   return (
     <div className="mx-auto max-w-[650px] grow flex flex-col justify-between">
       <ul className="max-h-[600px] flex flex-col gap-1 overflow-y-auto">
+        {messages.map(message => (
+          <li key={message.id} className="max-w-[77%] ml-auto mr-2 flex flex-col gap-2 ">
+            <div className="flex flex-row-reverse items-center gap-2">
+              <span className=" flex items-center justify-center size-6 text-[#f2f3f5] bg-[#007aff] rounded-full">
+                A
+              </span>
+              <span className="text-[#5d6983] text-[11px]">Andrew</span>
+            </div>
+            <p className="mr-8 py-3 px-4 bg-[#004C94] rounded-lg  text-[13px]/[15px]">
+              {message.body}
+            </p>
+          </li>
+        ))}
         {/* <li className="w-[275px] box_message">
           <p className=" text-xs opacity-[0.87]">
             Happy to help - lets walk the process through together once and we should be
@@ -141,21 +156,8 @@ export const MainChat: FC<MainChatProps> = ({ messages }) => {
             <p className="text-xs opacity-[0.87]">Implementing</p>
           </div>
         </li> */}
-        {messages.map(message => (
-          <li key={message.id} className="max-w-[77%] ml-auto mr-2 flex flex-col gap-2 ">
-            <div className="flex flex-row-reverse items-center gap-2">
-              <span className=" flex items-center justify-center size-6 text-[#f2f3f5] bg-[#007aff] rounded-full">
-                A
-              </span>
-              <span className="text-[#5d6983] text-[11px]">Andrew</span>
-            </div>
-            <p className="mr-8 py-3 px-4 bg-[#004C94] rounded-lg  text-[13px]/[15px]">
-              {message.body}
-            </p>
-          </li>
-        ))}
       </ul>
-      <Field />
+      <Field setMessages={setMessages} />
     </div>
   );
 };

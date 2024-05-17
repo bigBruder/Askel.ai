@@ -1,11 +1,15 @@
 /* eslint-disable jsx-a11y/no-autofocus */
-import { FC, KeyboardEvent } from 'react';
-import { Form } from '@remix-run/react';
+// import { Form } from '@remix-run/react';
+import { Dispatch, FC, KeyboardEvent, SetStateAction, useState } from 'react';
 import clsx from 'clsx';
-
 import { BtnAdd } from './BtnAdd';
+import { Messages } from '~/types/interfaces';
 
-export const Field: FC = () => {
+export const Field: FC<{ setMessages: Dispatch<SetStateAction<Messages[]>> }> = ({
+  setMessages,
+}) => {
+  const [value, setValue] = useState('');
+
   const addMessage = (e: KeyboardEvent<HTMLInputElement>) => {
     setTimeout(() => {
       if (e.code === 'Enter') {
@@ -15,8 +19,15 @@ export const Field: FC = () => {
   };
   return (
     <>
-      <Form className="w-[650px] mt-auto flex gap-2">
+      <form
+        className="w-[650px] mt-auto flex gap-2"
+        onSubmit={e => {
+          e.preventDefault();
+          setMessages(prevState => [...prevState, { body: value, id: Date.now() }]);
+        }}
+      >
         <input
+          onChange={e => setValue(e.target.value)}
           onKeyDown={addMessage}
           className={clsx(
             'w-[618px] min-h-[60px] max-h-[100px] px-3 text-xs/5 text-white bg-transparent border-2 border-[#506182] rounded-lg',
@@ -28,7 +39,7 @@ export const Field: FC = () => {
           autoFocus
         />
         <BtnAdd handler={() => {}} />
-      </Form>
+      </form>
     </>
   );
 };
