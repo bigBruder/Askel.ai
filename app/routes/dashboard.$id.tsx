@@ -1,32 +1,21 @@
-
-import { BackBtn } from '~/components/BackBtn';
-import { ListOverview } from '~/components/ListOverview';
+import { ListChat } from '~/components/ListChat';
 import { MainOverview } from '~/components/MainOverview';
-import { SideBar } from '~/components/SideBar';
-import { User } from '~/components/User';
-import { mockOverviewsId, mockProcessedId, mockRateId, titles } from '~/mockData';
+import { NavProcess } from '~/components/NavProcess';
 
-
-
+import { mockOverviewsId, mockProcessedId, mockRateId, titles } from '~/data/mockData';
 
 export default function DashboardOverview() {
-
-
   return (
-    <div className="flex">
-      <SideBar>
-        <BackBtn path="/dashboard" />
-        <div>
-          <h2 className="mb-1 flex-[1] py-3 px-4 bg-[#1f1f28] rounded">Overview</h2>
-          <ListOverview titles={titles} />
-        </div>
-        <User />
-      </SideBar>
-      <MainOverview
-        mockOverviews={mockOverviewsId}
-        mockProcessed={mockProcessedId}
-        mockRate={mockRateId}
-      />
+    <div className="flex gap-4">
+      <div>
+        <NavProcess />
+        <MainOverview
+          mockOverviews={mockOverviewsId}
+          mockProcessed={mockProcessedId}
+          mockRate={mockRateId}
+        />
+      </div>
+      <ListChat titles={titles} />
     </div>
   );
 }

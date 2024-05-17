@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import { EnumStatusOverview } from '~/types/enums';
 import { StatusOverviewProps } from '~/types/props';
 
@@ -23,7 +24,7 @@ export const StatusOverview: FC<StatusOverviewProps> = ({ status, text }) => {
       break;
   }
   return (
-    <div className="flex-[1]">
+    <div className="flex-[1] py-2">
       <span
         style={{
           color: textColor,

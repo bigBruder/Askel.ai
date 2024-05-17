@@ -5,7 +5,7 @@ import { EnumStatusOverview } from '~/types/enums';
 import { RateProps } from '~/types/props';
 
 export const Rate: FC<RateProps> = ({ rate, status }) => {
-  let bgColor = '';
+  let bgColor = '#ED654C';
   switch (status) {
     case EnumStatusOverview.running:
       bgColor = '#22A447';

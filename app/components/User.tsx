@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import { IoPersonCircleOutline } from 'react-icons/io5';
 
 export const User: FC = () => {
@@ -13,9 +14,9 @@ export const User: FC = () => {
       </div>
       <button
         type="button"
-        className="w-8 h-8 flex items-center justify-center hover:text-activeColor animate_icons"
+        className="w-8 h-8 flex items-center justify-center hover:text-activeColor focus:text-activeColor animate_icons"
       >
-        <svg className="w-8 h-8 fill-[#5d6983] hover:fill-[#007aff] transition-colors">
+        <svg className="w-8 h-8 fill-[#5d6983] hover:fill-[#007aff] focus:fill-[#007aff] transition-colors">
           <use xlinkHref="/icons/sprite.svg#setting" />
         </svg>
       </button>

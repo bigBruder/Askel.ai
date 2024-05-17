@@ -1,9 +1,10 @@
+import { FC } from 'react';
 import { Link } from '@remix-run/react';
 import clsx from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
-import { FC } from 'react';
-import { useIsOpen } from '~/hooks/useIsOpen';
+
 import { ItemOverviewProps } from '~/types/props';
+import { useIsOpen } from '~/hooks/useIsOpen';
 
 export const ItemOverview: FC<ItemOverviewProps> = ({ item }) => {
   const { isOpen, toggleIsOpen } = useIsOpen();
@@ -13,7 +14,8 @@ export const ItemOverview: FC<ItemOverviewProps> = ({ item }) => {
       <div className="flex justify-between mb-1 py-3 px-4 bg-[#1f1f28] rounded">
         <Link
           to="/dashboard/chat"
-          className=" max-w-[160px] text-xs text-[#5d6983] hover:text-[#007AFF] transition-colors duration-300"
+          className=" max-w-[160px] text-xs text-[#5d6983] hover:text-[#007AFF]
+          focus:text-[#007AFF] transition-colors duration-300"
         >
           {item.title}
         </Link>

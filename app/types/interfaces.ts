@@ -12,7 +12,7 @@ export interface Overviews {
   status: string;
   time: string;
   success_rate: number;
-  rate: number
+  rate: number;
 }
 export interface Titles {
   id: string;
@@ -20,6 +20,10 @@ export interface Titles {
   description: string[];
 }
 export interface SuggestionArr {
-    id : number
-    value : string
+  id: number;
+  value: string;
+}
+export interface Messages {
+  body: string;
+  id: number;
 }

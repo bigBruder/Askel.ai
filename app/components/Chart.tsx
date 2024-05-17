@@ -1,5 +1,6 @@
-import clsx from 'clsx';
 import { FC } from 'react';
+import clsx from 'clsx';
+
 import { ChartProps } from '~/types/props';
 
 export const Chart: FC<ChartProps> = ({ mockProcessed, mockRate }) => {
@@ -7,32 +8,31 @@ export const Chart: FC<ChartProps> = ({ mockProcessed, mockRate }) => {
     mockProcessed.some(el => el.value > 100) || mockRate.some(el => el.value > 100);
   return (
     <div className="flex gap-4">
-      <div className=" w-[408px] p-5 bg-[#12121ae5] rounded-lg flex flex-col justify-end overflow-hidden">
+      <div className=" flex-1 p-4 bg-[#12121ae5] rounded-lg flex flex-col justify-end overflow-hidden">
         <p className="mb-3 text-[#ffffff99] text-xs/5 font-medium">
           Volume of events processed
         </p>
-
         <div className="flex flex-col items-end gap-[33px] justify-between ">
           {isMore100 && (
-            <div className=" flex gap-[10px] items-center">
+            <div className=" flex gap-2 items-center">
               <p className="text-[#ffffff99] text-xs">150</p>
               <div className="h-[1px] w-[322px] bg-[#ffffff0f]"></div>
             </div>
           )}
-          <div className=" flex gap-[10px] items-center">
+          <div className=" flex gap-2 items-center">
             <p className="text-[#ffffff99] text-xs">100</p>
             <div className="h-[1px] w-[322px] bg-[#ffffff0f]"></div>
           </div>
-          <div className=" flex gap-[10px]  items-center">
+          <div className=" flex gap-2  items-center">
             <p className="text-[#ffffff99] text-xs">50</p>
             <div className="h-[1px] w-[322px] bg-[#ffffff0f]"></div>
           </div>
-          <div className=" flex gap-[10px]  items-center">
+          <div className=" flex gap-2  items-center">
             <p className="text-[#ffffff99] text-xs">0</p>
             <div className="h-[1px] w-[322px] bg-[#ffffff0f]"></div>
           </div>
         </div>
-        <ul className="ml-14 flex gap-8  text-xs/[18px] text-[#ffffff4d]">
+        <ul className="ml-[15%] flex gap-8  text-xs/[18px] text-[#ffffff4d]">
           {mockProcessed.map(el => (
             <li key={el.day} className="flex flex-col items-center relative bottom-1">
               <div className={clsx('absolute bottom-[22px] z-10')}>
@@ -50,26 +50,25 @@ export const Chart: FC<ChartProps> = ({ mockProcessed, mockRate }) => {
           ))}
         </ul>
       </div>
-      <div className=" w-[408px] p-5 bg-[#12121a] rounded-lg flex flex-col justify-end">
+      <div className="flex-1 p-4 bg-[#12121a] rounded-lg flex flex-col justify-end">
         <p className="mb-3 text-[#ffffff99] text-xs/5 font-medium">
           Error and success rate
         </p>
         <div className="mt-auto flex flex-col items-end gap-[33px] justify-between ">
-          
-          <div className=" flex gap-[10px] items-center">
+          <div className=" flex gap-2 items-center">
             <p className="text-[#ffffff99] text-xs">100</p>
             <div className="h-[1px] w-[322px] bg-[#ffffff0f]"></div>
           </div>
-          <div className=" flex gap-[10px]  items-center">
+          <div className=" flex gap-2  items-center">
             <p className="text-[#ffffff99] text-xs">50</p>
             <div className="h-[1px] w-[322px] bg-[#ffffff0f]"></div>
           </div>
-          <div className=" flex gap-[10px]  items-center">
+          <div className=" flex gap-2  items-center">
             <p className="text-[#ffffff99] text-xs">0</p>
             <div className="h-[1px] w-[322px] bg-[#ffffff0f]"></div>
           </div>
         </div>
-        <ul className="ml-14 flex gap-8  text-xs/[18px] text-[#ffffff4d]">
+        <ul className="ml-[15%] flex gap-8  text-xs/[18px] text-[#ffffff4d]">
           {mockRate.map(el => (
             <li key={el.day} className="flex flex-col items-center relative bottom-1">
               <div className={clsx('absolute bottom-[22px] z-10')}>

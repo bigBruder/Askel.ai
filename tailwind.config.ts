@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        logo: "url('/icons/bg-logo.svg')",
+        logo: "url('/icons/background.svg')",
       },
       textColor: {
         activeColor: '#007aff',

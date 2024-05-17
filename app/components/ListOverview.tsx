@@ -1,6 +1,7 @@
 import { FC } from 'react';
-import { ItemOverview } from './ItemOverview';
+
 import { ListOverviewProps } from '~/types/props';
+import { ItemOverview } from './ItemOverview';
 
 export const ListOverview: FC<ListOverviewProps> = ({ titles }) => {
   return (

@@ -1,4 +1,4 @@
-import { Overviews, Processed, Rate, Titles } from './interfaces';
+import { Messages, Overviews, Processed, Rate, Titles } from './interfaces';
 
 export type StatisticsProps = {
   mockOverviews: Overviews[];
@@ -36,4 +36,11 @@ export type ListOverviewProps = {
 };
 export type ItemOverviewProps = {
   item: Titles;
+};
+export type MainChatProps = {
+  messages: Messages[];
+};
+
+export type BtnAddProps = {
+  handler: () => void;
 };

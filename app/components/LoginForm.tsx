@@ -1,5 +1,6 @@
-import { Form } from '@remix-run/react';
 import { FC, useState } from 'react';
+import { Form } from '@remix-run/react';
+
 import { FaCheck } from 'react-icons/fa';
 
 export const LoginForm: FC = () => {

@@ -1,6 +1,7 @@
 import { FC, useRef } from 'react';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
-import { suggestion } from '~/mockData';
+
+import { suggestion } from '~/data/mockData';
 
 export const Suggestions: FC = () => {
   const containerRef = useRef(null);
@@ -26,7 +27,7 @@ export const Suggestions: FC = () => {
       <button
         onClick={scrollLeft}
         type="button"
-        className="w-6 h-6 text-white hover:text-activeColor animate_icons"
+        className="w-6 h-6 text-white hover:text-activeColor focus:text-activeColor animate_icons"
       >
         <MdKeyboardArrowLeft className="w-6 h-6" />
       </button>
@@ -46,7 +47,7 @@ export const Suggestions: FC = () => {
       <button
         onClick={scrollRight}
         type="button"
-        className="w-6 h-6 text-white hover:text-activeColor animate_icons"
+        className="w-6 h-6 text-white hover:text-activeColor focus:text-activeColor animate_icons"
       >
         <MdKeyboardArrowRight className="w-6 h-6" />
       </button>

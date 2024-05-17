@@ -49,8 +49,9 @@ textarea {
 }
 
 ::-webkit-scrollbar {
+
   width: 8px;
-  background: #00561b3f;
+  background: #37a85a3f;
   border-radius: 8px;
 }
 
@@ -82,8 +83,4 @@ textarea {
 }
 .hidden-scrollbar::-webkit-scrollbar-thumb {
   display: none;
-}
-
-.activeLink {
-  @apply bg-[#1f1f28] text-white stroke-[#007AFF] fill-[#007AFF];
 }
