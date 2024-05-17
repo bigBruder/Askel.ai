@@ -15,7 +15,7 @@ export const Field: FC = () => {
   };
   return (
     <>
-      <Form method="post" id="chat-form" className="w-[650px] mt-auto flex gap-2">
+      <Form className="w-[650px] mt-auto flex gap-2">
         <input
           onKeyDown={addMessage}
           className={clsx(
