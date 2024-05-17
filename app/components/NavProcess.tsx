@@ -10,9 +10,13 @@ export const NavProcess: FC = () => {
       <div className="mb-4 flex gap-2">
         <Link
           className={clsx(
-            'w-[140px] py-[10px] text-center text-[13px]/[10px] bg-[#12121a] border border-[#12121a] rounded-[50px]',
+            'w-[140px] py-[10px] text-center text-[13px]/[10px] bg-[#12121a] border  rounded-[50px]',
             'hover:bg-[#152721] hover:border-[#07b83f] focus:bg-[#152721] focus:border-[#07b83f] transition-colors duration-300',
-            `${pathName.includes('history') && 'bg-[#152721] border-[#07b83f]'}`
+            `${
+              pathName.includes('history')
+                ? 'bg-[#152721]  border-[#07b83f]'
+                : 'border-[#12121a]'
+            }`
           )}
           to="/dashboard/history"
         >
@@ -20,9 +24,13 @@ export const NavProcess: FC = () => {
         </Link>
         <Link
           className={clsx(
-            'w-[140px] py-[10px] text-center text-[13px]/[10px] bg-[#12121a] border border-[#12121a] rounded-[50px]',
+            'w-[140px] py-[10px] text-center text-[13px]/[10px] bg-[#12121a] border rounded-[50px]',
             'hover:bg-[#152721] hover:border-[#07b83f] focus:bg-[#152721] focus:border-[#07b83f] transition-colors duration-300',
-            `${pathName.includes('chat') && 'bg-[#152721] border-[#07b83f]'}`
+            `${
+              pathName.includes('chat')
+                ? 'bg-[#152721]  border-[#07b83f]'
+                : 'border-[#12121a]'
+            }`
           )}
           to="/dashboard/chat"
         >
@@ -30,9 +38,13 @@ export const NavProcess: FC = () => {
         </Link>
         <Link
           className={clsx(
-            'w-[140px] py-[10px] text-center text-[13px]/[10px] bg-[#12121a] border border-[#12121a] rounded-[50px]',
+            'w-[140px] py-[10px] text-center text-[13px]/[10px] bg-[#12121a] border rounded-[50px]',
             'hover:bg-[#152721] hover:border-[#07b83f] focus:bg-[#152721] focus:border-[#07b83f] transition-colors duration-300',
-            `${pathName.includes('files') && 'bg-[#152721] border-[#07b83f]'}`
+            `${
+              pathName.includes('files')
+                ? 'bg-[#152721]  border-[#07b83f]'
+                : 'border-[#12121a]'
+            }`
           )}
           to="/dashboard/files"
         >
